@@ -1,0 +1,75 @@
+.container{
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  background: url(../img/blackBackground3.png) center center;
+  background-size: cover;
+  transition: 500ms;
+}
+
+.webAppPage .container .centered{
+  right: 30%;
+  top: 42%;
+}
+
+.picWebApp img.invisible{
+  width: 0px;
+}
+
+.picWebApp{
+  position: absolute;
+}
+
+.picWebApp img{
+  width: 100%;
+  transition: 1000ms;
+  cursor: pointer;
+}
+
+.picWebApp:nth-child(1){
+  top: 46%;
+  right: 71%;
+  width: 319px;
+  transition: 1500ms;
+}
+
+.picWebApp:nth-child(2){
+  top: 25%;
+  right: 25%;
+  width: 290px;
+  transition: 1800ms;
+  /*transition-delay: 1200ms;*/
+  transform: rotate(25deg);
+}
+
+.picWebApp:nth-child(3){
+  top: 75px;
+  right: 75%;
+  width: 349px;
+  transition: 1000ms;
+  /*transition-delay: 300ms;*/
+}
+
+.picWebApp:nth-child(4){
+  top: 67%;
+  right: 5%;
+  width: 359px;
+  transition: 1200ms;
+}
+
+.picWebApp:nth-child(5){
+  top: 55%;
+  right: 48%;
+  width: 115px;
+  transition: 1200ms;
+  transform: rotate(93deg);
+}
+
+#appText {
+  position: absolute;
+  top: 2%;
+  right: 67%;
+  width: auto;
+  /* background: white; */
+  height: auto;
+}

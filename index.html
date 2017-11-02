@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr-FR">
 	<head>
 		<meta charset="UTF-8"/>
 		<title>ruttar - web designer</title>
 
 		<link href="src/css/reset.css" rel="stylesheet" type="text/css" />
 		<link href="src/css/style.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="src/css/animate.css">
 
 
 		<!-- Fichiers Javascript et jquery/jqueryUI -->
@@ -30,7 +31,7 @@
 					<span></span>
 				</div>
 				<div class="headerLogo">
-					<span>Ruttar</span>
+					<a href="#sectionHome"><span>Ruttar</span></a>
 				</div>
 			</header>
 
@@ -41,7 +42,7 @@
 								<li ><a href="#sectionHome" id="homeMenu">Home</a></li>
 								<li ><a href="#about" id="aboutMenu">Entre nous</a></li>
 								<li><a href="#services">Services</a></li>
-								<li><a href="#contact">Contact</a></li>
+								<li><a href="#contactForm">Contact</a></li>
 							</ul>
 						</nav>
 			</div>
@@ -53,9 +54,6 @@
 					</div>
 
 					<div class="rectangleWD zeropx">
-					</div>
-
-					<div class="rectangleArrow farLeft">
 					</div>
 
 					<div class="rectangleMenu farRight">
@@ -85,11 +83,11 @@
 				<section id="sectionAbout">
 
 					<article id="about">
-							<div class="leftAbout wow g_v_d">
+							<div class="leftAbout wow fadeInUp">
 								<h2>En quelques mots</h2>
 							</div>
-							<div class="rightAbout wow">
-								<p class="wow">Inspirés par la nature, nous sommes à la recherche de l'harmonie, à l'écoute des besoins, attentifs aux tendances et réactifs aux changements. </p>
+							<div class="rightAbout wow fadeInUp" data-wow-delay="300ms">
+								<p class="wow fadeInUp">Inspirés par la nature, nous sommes à la recherche de l'harmonie, à l'écoute des besoins, attentifs aux tendances et réactifs aux changements. </p>
 							</div>
 							<div class="clear">
 							</div>
@@ -99,67 +97,45 @@
 							</div>
 							<div class="divUnderAbout">
 
-								<div class="underAbout" id="ecoute">
+								<div class="underAbout wow fadeInUp" id="ecoute">
 									<figure>
 										<img src="./src/img/crayonLight.jpg" alt="" class="imgUnderAbout">
 										<figcaption>Conception</figcaption>
 									</figure>
 									<div class="comment" >
-										<span class="commentSpan">Nous sommes à l'écoute des demandes du clients</span>
+										<p>Ensemble, nous analysons les besoins, trouvons les solutions les plus adaptées et définissons les grandes lignes du projet.</p>
 									</div>
 								</div>
 
-								<div class="underAbout" id="planification">
+								<div class="underAbout wow fadeInUp" data-wow-delay="300ms" id="planification">
 									<figure>
 										<img src="./src/img/mesureToolsLight.jpg" alt="" class="imgUnderAbout">
 										<figcaption>Planification</figcaption>
 									</figure>
 									<div class="comment" >
-										<span class="commentSpan">Nous sommes à l'écoute des demandes du clients</span>
+										<p>Une fois le concept trouvé, le processus est lancé par la modélisation graphique du site ou de l'application et nous nous accordons sur un calendrier. </p>
 									</div>
 								</div>
 
-								<div class="underAbout " id="realisation">
+								<div class="underAbout wow fadeInUp" data-wow-delay="600ms" id="realisation">
 									<figure>
 										<img src="./src/img/toolsLight.jpg" alt="" class="imgUnderAbout">
 										<figcaption>Réalisation</figcaption>
 									</figure>s
 									<div class="comment" >
-										<span class="commentSpan">Nous sommes à l'écoute des demandes du clients</span>
+										<p>A l'aide des dernières technologies web, nous nous lancons dans la programation afin de réaliser ce que nous avons défini ensemble ultérieurement. </p>
 									</div>
 								</div>
 
 							</div>
 							<div class="clear">
 							</div>
-							<!-- <p>Avec assez de volonté, nous pouvons réaliser l'impossible...</p> -->
-							<p>“Toute chose qui est, si elle n'était, serait énormément improbable.” <br><br><span>Paul Valéry</span></p>
-							<!-- <p>“Lorsque vous avez éliminé l’impossible, ce qui reste, si improbable soit-il, est nécessairement la vérité.” Arthur Conan Doyle</p> -->
-
-							<!-- <div class="printing full-width">
-								<div class="red print"></div>
-								<div class="red2 print"></div>
-								<div class="red3 print"></div>
-								<div class="green print"></div>
-								<div class="black print"></div>
-								<div class="black2 print"></div>
-								<div class="black3 print"></div>
-								<div class="brun print"></div>
-								<div class="brun2 print"></div>
-								<div class="brun3 print"></div>
-								<div class="brun4 print"></div>
-								<div class="brun5 print"></div>
-								<div class="brun6 print"></div>
-							</div> -->
-
-							<!-- <canvas id="canvas" class="full-width" height="30" >canvas</canvas> -->
+							<div >
+								<h3 id="seed" class="sentence" data-text="Il suffit d'une première graine..."></h3>
+							</div>
 					</article>
 
 					<div class="cover full-width">
-						<div class="printer">
-							<div class="printerOne"></div>
-							<div class="printerTwo"></div>
-						</div>
 					</div>
 
 				</section>
@@ -173,100 +149,43 @@
 								<h2>SERVICES.</h2>
 							</div>
 							<div class="divUnderAbout">
-								<div class="underAbout" id="webDesign">
-									<span>Web design</span>
+								<a href="webDesignPage.html">
+								<div class="underAbout " id="webDesign">
+									<span>WEB DESIGN</span>
 								</div>
-								<div class="webDesignPage">
-									<div id="cross" class="hide">
-											<span></span>
-											<span></span>
-									</div>
-									<div class="title">
-										<div class="coverTitle"></div>
-										<span>
-											Web design
-										</span>
-									</div>
+								</a>
+								<div class="greenDiv"></div>
+								<a href="webAppPage.html">
+								<div class="underAbout " id="webApp">
+									<span>WEB APP</span>
 								</div>
-								<div class="underAbout" id="webApp">
-									<span>Application web</span>
-								</div>
-								<div class="webAppPage">
-									<div id="cross" class="hide">
-											<span></span>
-											<span></span>
-									</div>
-									<div class="title">
-										<div class="coverTitle"></div>
-										<span>
-											Application web
-										</span>
-									</div>
-								</div>
-
+								</a>
 							</div>
-							<!-- <div class="full-width empty">
-							</div> -->
 							<div class="clear">
+							</div>
+							<div >
+								<h3 id="team" class="sentence" data-text="...et d'une équipe enthousiaste!"></h3>
 							</div>
 
 					</article>
 						<div class="fullscreen-bg full-width hide">
 							<video playsinline loop muted autoplay class="fullscreen-bg__video ">
-									<source src="./src/img/seaWeb6.webm" type="video/webm">
-									<source src="./src/img/seaWeb6.mp4" type="video/mp4">
-									<source src="./src/img/seaWeb6.ogg" type="video/ogg">
+									<source src="./src/img/fourmis5.webm" type="video/webm">
+									<source src="./src/img/fourmis5.mp4" type="video/mp4">
+									<source src="./src/img/fourmis5.ogg" type="video/ogg">
 							</video>
 						</div>
-
 				</section>
-
-
-				<!-- <section id="sectionServices">
-					<h3>PORTFOLIO - Quleques exemples</h3>
-					<article id="services" class="article">
-							<div class="left paragraphe">
-								<p class="title1"><strong><span class="bold">WEB</span> DESIGN</strong></p>
-								<p class="bold">Un site:</p>
-								<p class="bold link"><a href="http://www.apneaclubgeneve.ch/">apneaclubgeneve.ch</a><br><br></p>
-								<p class="bold">Un concept:</p>
-								<p>Le site en question est celui du club d'Apnée de Genève, et en apnée, on recherche la profondeur. C'est là que le site vous emènera! </p>
-								<p>Retenez votre souffle et voir!  </p>
-							</div>
-
-							<div class="right image">
-								<a href="http://www.apneaclubgeneve.ch/"><img src="./src/img/apnea.jpg"></a>
-							</div>
-							<div class="clear">
-							</div>
-						</article>
-						<article id="webapp" class="article">
-							<div class="left renaud">
-								<img src="./src/img/renaudagogo.png">
-							</div>
-							<div class="left" id="portWebApp">
-								<p class="title1"><strong><span class="bold">WEB</span> APPLICATION</strong></p>
-								<p class="bold">Un artiste sur scène - 50 reprises de Renaud - une application web</p>
-								<p>C'est le public, qui depuis son téléphone portable, après avoir répondu à un quiz sur la vie de Renaud, choisi en direct les chansons qu'il veut écouter! L'artiste sur scène reçoit les demandes du public sur sa tablette.</p>
-								<p class="bold">Du sur mesure</p>
-								<p>L'artiste peut du côté admin, à sa guise, changer, ajouter ou effacer autant les questions du quiz que les chansons proposées, par contre c'est lui qui les chante dans les tous les cas!</p>
-								<!-- <p>Le fonctionnement de l'application est expliquée ici.</p> -->
-							<!-- </div>
-
-							<div class="clear">
-							</div>
-						</article>
-				</section> --> -->
 
 				<section id="contactForm">
 					<div id="map" class="full-width">
 					</div>
-					<div class="empty2">
+					<div class="empty2 wow fadeInUp">
 							<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzd4bQYT8Z8yb4s0fOGLiBcwHgFQN__sd8HHma7FsILoONy9L8C/exec">
 								<input type="text" name="nom" placeholder="Votre Nom"><br>
 								<input type="email" name="email" placeholder="Votre adresse email"><br>
 								<textarea class="inputText" type="textarea" rows="10" cols="5" placeholder="Laissez nous un petit message"></textarea><br>
-								<input type="submit" name="Envoyer">
+								<input type="submit" name="Envoyer" value="ENVOYER">
 							</form>
 					</div>
 					<script>
@@ -274,7 +193,87 @@
 							var uluru = {lat: 46.209642, lng: 6.120710};
 							var map = new google.maps.Map(document.getElementById('map'), {
 								zoom: 16,
-								center: uluru
+								center: uluru,
+								styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
 							});
 							var marker = new google.maps.Marker({
 								position: uluru,
@@ -293,3 +292,38 @@
 		</div>
 	</body>
 </html>
+
+
+
+
+
+
+<!-- <p>Avec assez de volonté, nous pouvons réaliser l'impossible...</p> -->
+<!-- <p>“Toute chose qui est, si elle n'était, serait énormément improbable.” <br><br><span>Paul Valéry</span></p> -->
+<!-- <p>“Lorsque vous avez éliminé l’impossible, ce qui reste, si improbable soit-il, est nécessairement la vérité.” Arthur Conan Doyle</p> -->
+
+<!-- <div class="printing full-width">
+	<div class="red print"></div>
+	<div class="red2 print"></div>
+	<div class="red3 print"></div>
+	<div class="green print"></div>
+	<div class="black print"></div>
+	<div class="black2 print"></div>
+	<div class="black3 print"></div>
+	<div class="brun print"></div>
+	<div class="brun2 print"></div>
+	<div class="brun3 print"></div>
+	<div class="brun4 print"></div>
+	<div class="brun5 print"></div>
+	<div class="brun6 print"></div>
+</div> -->
+
+<!-- <canvas id="canvas" class="full-width" height="30" >canvas</canvas> -->
+
+
+
+
+<!-- <div class="printer">
+	<div class="printerOne"></div>
+	<div class="printerTwo"></div>
+</div> -->
