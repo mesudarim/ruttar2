@@ -150,31 +150,38 @@ $( ".underAbout" ).on("click", function() {
 document.addEventListener('mousemove', evenement => {
     var scrollTop = $(window).scrollTop();
     var halfWindow = $(window).width()/2;
-    var diff = $(window).width() - 1024;
-    x = evenement.clientX;
-    y = evenement.clientY + scrollTop;
-    if( y > 3320 && y < 4022){
-      if($(window).width() < 1024){
-        if(x < halfWindow){
-          $("#webDesign").css("left", x - 200);
-          $("#webDesign").css("top", y - 4000);
+    if(halfWindow > 475){
+      var diff = $(window).width() - 1024;
+      x = evenement.clientX;
+      y = evenement.clientY + scrollTop;
+      if( y > 3120 && y < 3800){
+        if($(window).width() < 1024){
+          if(x < halfWindow){
+            $("#webDesign").css("left", x - 200);
+            $("#webDesign").css("top", y - 3800);
+          }
+          else{
+            $("#webApp").css("right", $(window).width() - x - 200);
+            $("#webApp").css("top", y - 3800);
+          }
         }
         else{
-          $("#webApp").css("right", $(window).width() - x - 200);
-          $("#webApp").css("top", y - 4000);
+          if(x < halfWindow){
+            $("#webDesign").css("left", x - 100 - diff/2 );
+            $("#webDesign").css("top", y - 3800);
+          }
+          else{
+            $("#webApp").css("right", $(window).width() - x - 100 - diff/2);
+            $("#webApp").css("top", y - 3800);
+          }
         }
       }
-      else{
-        if(x < halfWindow){
-          $("#webDesign").css("left", x - 100 - diff/2 );
-          $("#webDesign").css("top", y - 4000);
-        }
-        else{
-          $("#webApp").css("right", $(window).width() - x - 100 - diff/2);
-          $("#webApp").css("top", y - 4000);
-        }
-      }
+
     }
+    else{
+      console.log("halfWindow > 475")
+    }
+
 })
 
 //
@@ -190,28 +197,19 @@ document.addEventListener('mousemove', evenement => {
 // }
 
 
-
+var showingSeed = false
+var showingTeam = false
 ////selection du menu pendant le scroll
 $(window).on("scroll", function(){
     var scrollTop = $(window).scrollTop();
-    console.log(scrollTop);
     var limit = scrollTop + $(window).height();
 
     if(scrollTop > 1640 && $(window).scrollTop() < 1660){
-      var text = $('#seed').data('text');
-      typeWriterSeed(text, 0);
+      if(showingSeed == false){
+        var text = $('#seed').data('text');
+        showingSeed = true;
+        typeWriterSeed(text, 0);
       }
-
-    if(scrollTop > 2920 && $(window).scrollTop() < 3000){
-      var text = $('#team').data('text');
-      typeWriterTeam(text, 0);
-      }
-
-    if(scrollTop < 1000){
-      $('#seed').html("")
-      console.log("seed should be null")
-      // document.getElementById('seed').innerHTML = "";
-      // document.getElementById('team').innerHTML = "";
     }
 
     function typeWriterSeed(text, n) {
@@ -222,7 +220,18 @@ $(window).on("scroll", function(){
           typeWriterSeed(text, n)
         }, 150);
       }
+      else{
+        showingSeed = false;
+      }
     }
+
+    if(scrollTop > 2920 && $(window).scrollTop() < 3000){
+      if(showingTeam == false){
+        var text = $('#team').data('text');
+        showingTeam = true;
+        typeWriterTeam(text, 0);
+        }
+      }
 
     function typeWriterTeam(text, n) {
       if (n < (text.length)) {
@@ -231,6 +240,9 @@ $(window).on("scroll", function(){
         setTimeout(function() {
           typeWriterTeam(text, n)
         }, 150);
+      }
+      else{
+        showingTeam = false;
       }
     }
 
@@ -258,6 +270,11 @@ $(window).on("scroll", function(){
           $(".fullscreen-bg").addClass("hide")
         }
 })
+
+document.getElementById("sendButton").addEventListener("click", function(){
+    $("#contact").addClass("thanks")
+    document.getElementById("contact").innerHTML = "Merci pour votre message, nous vous contacterons dans les plus brefs délais. ";
+});
 
 new WOW().init();
 

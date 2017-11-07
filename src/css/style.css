@@ -2,51 +2,14 @@
 ///FONT CSS
 ///////////////////*/
 
-@font-face {
-    font-family: 'saman';
-    src: url('../font/saman/SAMARN__.TTF') format('truetype'),
-}
-
-@font-face {
-    font-family: 'comfortaa';
-    src: url('../font/comfortaa/Comfortaa_Regular.ttf') format('truetype'),;
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'levenim';
-    src: url('../font/levenim2/ufonts.com_levenim-mt.woff') format('truetype'),;
-}
-
-@font-face {
-    font-family: 'pirulen';
-    src: url('../font/pirulen/pirulen rg.ttf') format('truetype'),;
-}
-
-@font-face {
-    font-family: 'caviar';
-    src: url('../font/caviar/CaviarDreams.ttf') format('truetype'),;
-}
-
-
 body {
-  /*background:linear-gradient(to bottom, rgb(12,12,14), white);*/
   background: rgb(241, 241, 241);
-  /*background: #fff;*/
-  /*color: #8b8d87;*/
   color: #404040;
   color: rgb(80,92,105);
-  /*color: rgb(245,245,245);;*/
-  /*font-family: helvetica,arial,times;*/
   font-family: 'Raleway', sans-serif;
-  /*font-family: 'caviar', arial;*/
   font-size: 100%;
   line-height: 1.5em;
-  /*width: 100vw;*/
-  /*background-color: rgba(0,0,0);*/
   position: relative;
-  /*overflow-x: hidden;*/
 }
 
 #wrapper{
@@ -95,6 +58,17 @@ figure img{
   display: none;
 }
 
+.left{
+  float: left;
+}
+
+.center{
+  margin: 0 auto;
+}
+
+.right{
+  float: right;
+}
 /*/////////////////////////////
 GENERAL
 ////////////////////////////////*/
@@ -126,7 +100,6 @@ h3 {
   font-weight: bold;
 }
 
-
 p {
   line-height: 1.2em;
   margin-bottom: 1em;
@@ -137,7 +110,7 @@ p {
 .full-width {
   width: 100vw;
   position: relative;
-  left: 50%;
+  left: 49%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
@@ -173,7 +146,6 @@ section article ul{
   margin-bottom: 50px;
   font-size: 18px;
 }
-
 
 /*///////////////////////////
 WELCOME PAGE
@@ -230,18 +202,6 @@ WELCOME PAGE
   transition-duration: 1300ms;
   transition-timing-function: ease-in-out;
 }
-
-/*.rectangleArrow{
-  position: absolute;
-  width: 600px;
-  right: calc(5% + 28px);
-  height: 7px;
-  top: calc(85vh + 28px);
-  background: #fff;
-  z-index: 2;
-  transition-duration: 800ms;
-  transition-timing-function: ease-in-out;
-}*/
 
 .rectangleMenu{
   position: absolute;
@@ -403,31 +363,12 @@ nav ul li:hover,  nav ul li:hover a, .selected, #contact.selected{
   padding-top: 57px;
 }
 
-/*///////////////////////////////////////////////////
-/////Added-removed after click
-///////////////////////////////////////////////*/
-
-.smallBall{
-  width: 10px;
-  height: 10px;
-}
-
 .small{
   width: 10px;
 }
 
-.big{
-  margin-left: 22%;
-  width: 78%;
-}
-
 .overFlowHidden{
   overflow: hidden;
-}
-
-.menuUp{
-  margin-top: 32vh;
-  transition: 1000ms;
 }
 
 /*/////////////////////////////////////
@@ -517,8 +458,6 @@ nav ul li:hover,  nav ul li:hover a, .selected, #contact.selected{
   /*box-shadow: 9px 10px 5px rgba(200, 200, 200, 0.4);*/
 }
 
-
-
 article p{
   margin-bottom: 4em;
   font-size: 1.8em;
@@ -528,30 +467,6 @@ article p{
 p span{
   position: absolute;
   right: 50px;
-}
-/*
-div:nth-of-type(1) .underAbout{
-	background: rgb(62, 59, 115);
-}*/
-
-/*div:nth-of-type(2) .underAbout{
-	background: rgb(51, 234, 251);
-}*/
-
-/*div:nth-of-type(3) .underAbout{
-	background: rgb(209, 202, 161);
-}*/
-
-.left{
-  float: left;
-}
-
-.center{
-  margin: 0 auto;
-}
-
-.right{
-  float: right;
 }
 
 .empty{
@@ -651,9 +566,10 @@ div:nth-of-type(1) .underAbout{
 }
 
 .comment p{
-  font-size: 0.7em;
+  font-size: 0.8em;
   text-align: left;
   padding: 30px;
+  font-weight: 300;
 }
 
 .underAbout figure figcaption{
@@ -675,6 +591,7 @@ div:nth-of-type(1) .underAbout{
   margin: 0 auto;
   z-index: 1;
   color: #fff;
+  padding-left: 30px;
 }
 
 div h3 {
@@ -731,6 +648,7 @@ div h3 {
   position: absolute;
   padding: 0;
   padding-top: 110px;
+  background-color: rgba(244, 120, 38, 0.8);
 }
 
 #sectionServices .empty{
@@ -748,9 +666,17 @@ div h3 {
   height: 100vh;
   width: 100vw;
   opacity: 0;
+  transition: 500ms;
+}
+
+.webAppPage .container{
   background: url(../img/blackBackground3.png) center center;
   background-size: cover;
-  transition: 500ms;
+}
+
+.webDesignPage .container{
+  background-size: cover;
+  background: #fff;
 }
 
 .webAppPage .container .centered{
@@ -758,29 +684,49 @@ div h3 {
   top: 42%;
 }
 
-.picWebApp img.invisible{
-  width: 0px;
+.webDesignPage .container .windowUp{
+  top: -30%;
 }
 
-.picWebApp{
+
+.inContainer{
+  height: 75vh;
+  width: calc(100vw - 100px);
+  background: rgb(29, 32, 47);
+  transition: 700ms;
+  margin: 55px;
   position: absolute;
 }
 
-.picWebApp img{
+.picWebApp img.invisible, .picWebSite img.invisible{
+  width: 0px;
+}
+
+.picWebApp, .picWebSite{
+  position: absolute;
+}
+
+.picWebApp img, .picWebSite img{
   width: 100%;
   transition: 1000ms;
   cursor: pointer;
+  filter: brightness(0.7);
+}
+
+.picWebApp:hover img, .picWebSite:hover img{
+  transform: scale(1.2);
+      filter: brightness(1);
 }
 
 .picWebApp:nth-child(1){
   top: 46%;
   right: 71%;
-  width: 319px;
+  width: 304px;
   transition: 1500ms;
 }
 
 .picWebApp:nth-child(2){
-  top: 25%;
+  top: 30vh;
   right: 25%;
   width: 290px;
   transition: 1800ms;
@@ -811,10 +757,71 @@ div h3 {
   transform: rotate(93deg);
 }
 
+/*.picWebSite:nth-child(1){
+  top: 69%;
+  right: 39%;
+  width: 418px;
+  transition: 1500ms;
+}*/
+
+.picWebSite:nth-child(1) {
+  top: 1%;
+  right: 60%;
+  width: 441px;
+  transition: 1000ms;
+}
+
+/*.picWebSite:nth-child(2){
+  top: 48%;
+  right: 8%;
+  width: 290px;
+  transition: 1800ms;
+}*/
+
+.picWebSite:nth-child(2) {
+    top: 27vh;
+    right: 8%;
+    width: 290px;
+    transition: 1000ms;
+}
+
+.picWebSite:nth-child(3){
+  top: 30%;
+  right: 69%;
+  width: 349px;
+  transition: 1000ms;
+  transform: rotate(-16deg);
+  /* transition-delay: 300ms; */
+}
+
+.picWebSite:nth-child(4){
+  top: 7%;
+  right: 13%;
+  width: 359px;
+  transition: 1200ms;
+}
+
+/*.picWebSite:nth-child(5){
+  top: 55%;
+  right: 48%;
+  width: 115px;
+  transition: 1200ms;
+  transform: rotate(93deg);
+}*/
+
 #appText{
   position: absolute;
   top: 2%;
   left: 20%;
+  height: 30px;
+  color: #fff;
+  max-width: 70%;
+}
+
+.webDesignPage #appText{
+  position: absolute;
+  top: 3%;
+  left: 2%;
   height: 30px;
   color: #fff;
   max-width: 70%;
@@ -931,6 +938,11 @@ article div img{
   overflow: hidden;
   top: 42vh;
 }
+
+.webDesignPage .title{
+  margin-left: calc(50% - 314px);
+}
+
 
 .webDesignPage .title span, .webAppPage .title span{
   margin: 0 auto;
@@ -1081,6 +1093,15 @@ textarea{
   z-index: 2;
  }
 
+ .thanks{
+   color: #fff;
+   padding: 40px;
+   max-width: 30%;
+   max-height: 348px;
+   font-size: 38px;
+   line-height: 47px;
+ }
+
 /*//////////////////////////////////////
 ////  HAMBURGER menuUp
 ////////////////////////////////////////*/
@@ -1161,8 +1182,8 @@ CROSS
 
 #cross, #cross2 {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
   width: 46px;
   height: 34px;
   -webkit-transform: rotate(0deg);
@@ -1182,7 +1203,7 @@ CROSS
   position: absolute;
   height: 4px;
   width: 100%;
-  background: #fff;
+  background: rgb(29, 32, 47);
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -1216,6 +1237,7 @@ CROSS
 .show{
   z-index: 10;
   width: 100%;
+  border: solid 1px #fff;
 }
 
 .showPadding{
@@ -1225,6 +1247,196 @@ CROSS
   text-align: left;
 }
 
+@media screen and (max-width: 950px){
+  .divUnderAbout{
+    flex-direction: column;
+    margin: 0 auto;
+    width: 300px;
+    top: -364px;
+    padding: 120px 10px 10px 0px;
+  }
+
+  .comment p {
+    font-size: 0.7em;
+}
+
+  .underAbout figure {
+    top: -301px;
+  }
+
+  .underAbout {
+    padding: 250px 10px 10px 0px;
+  }
+
+  .about h2 {
+    padding-top: 73px;
+    font-size: 9vw;
+  }
+
+  h3 {
+    font-size: 3.3vw;
+  }
+
+  #team.sentence {
+    bottom: 254px;
+  }
+
+  #map {
+    top: 250px;
+  }
+
+  .empty2 {
+    bottom: -411px;
+  }
+
+  #webDesign {
+    top: -27px;
+    left: -243px;
+    transition: 200ms ease-in-out;
+  }
+
+  #webApp {
+    top: -406px;
+    right: -169px;
+    transition: 300ms ease-in-out;
+  }
+
+  .leftAbout {
+    margin-top: 5em;
+  }
+
+  #services .underAbout {
+    width: 172px;
+    min-width: 172px;
+    height: 101px;
+    padding-top: 74px;
+    font-size: 23px;
+  }
+
+.empty2 {
+      width: 50%;
+  }
+
+  .webDesignPage .title {
+    margin-left: calc(50% - 234px);
+    font-size: 80px;
+}
+
+}
+
+@media screen and (max-width: 650px){
+  .leftAbout {
+    margin-top: 2em;
+  }
+
+  .webDesignPage .title {
+      margin-left: calc(50% - 165px);
+      font-size: 54px;
+      top: 22vh;
+  }
+
+  .picWebSite:nth-child(1) {
+    display: none;
+}
+
+  .leftAbout h2 {
+    height: 5.3em;
+    padding-top: 55px;
+}
+
+  #webApp {
+      right: -119px;
+  }
+
+  #webDesign {
+      left: -40px;
+  }
+
+}
+
+@media screen and (max-width: 450px){
+  #webApp {
+    right: -27px;
+    top: -205px;
+  }
+
+  .inContainer {
+    width: calc(100vw - 30px);
+    margin: 15px;
+    height: 621px;
+  }
+
+  .empty2 {
+    width: 80%;
+  }
+
+  .leftAbout {
+    margin-top: 4em;
+  }
+
+  .leftAbout h2 {
+    font-size: 2.4em;
+  }
+
+  .webDesignPage .title {
+    margin-left: calc(50% - 118px);
+    font-size: 42px;
+    top: 15vh;
+  }
+
+  #cross, #cross2 {
+    top: 18px;
+    right: 16px;
+  }
+
+  #cross span{
+    background: #fff;
+  }
+
+  .logo {
+    right: calc(0% + 10px);
+    top: 84px;
+  }
+
+  .logo H1 {
+    font-size: 125px;
+    width: 304px;
+  }
+
+  .webDesigner {
+    font-size: 18px;
+    width: 295px;
+  }
+
+  #services .underAbout {
+    min-width: 115px;
+    width: 65px;
+    height: 73px;
+    padding-top: 42px;
+    font-size: 17px;
+    right: 0px;
+  }
+
+  #webApp{
+    right: -2px;
+  }
+
+  .rightAbout p {
+    font-size: 1em;
+  }
+
+  .leftAbout h2 {
+    font-size: 1.7em;
+  }
+
+  #map {
+      height: 1000px;
+  }
+
+  #webDesign {
+    left: 2px;
+  }
+}
 
 /*.inContainer{
   height: 300px;

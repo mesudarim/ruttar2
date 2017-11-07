@@ -19,8 +19,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src="app/javascript/slicknav/jquery.slicknav.js"></script>
 		<link href="app/javascript/slicknav/slicknav.css" rel="stylesheet" type="text/css">
-		<link href="https://fonts.googleapis.com/css?family=Comfortaa|Dosis|Questrial|Allura" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Raleway:100|Raleway:300|Raleway:500|Raleway:700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa%7cDosis%7cQuestrial%7cAllura" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:100%7cRaleway:300%7cRaleway:500%7cRaleway:700" rel="stylesheet">
 	</head>
 
 	<body class="overFlowHidden">
@@ -37,7 +37,8 @@
 
 
 			<div class="menu">
-						<nav role="navigation">
+						<nav>
+							<!-- role="navigation" -->
 							<ul id="menu" class="headerItem">
 								<li ><a href="#sectionHome" id="homeMenu">Home</a></li>
 								<li ><a href="#about" id="aboutMenu">Entre nous</a></li>
@@ -180,12 +181,12 @@
 				<section id="contactForm">
 					<div id="map" class="full-width">
 					</div>
-					<div class="empty2 wow fadeInUp">
+					<div class="empty2 wow fadeInUp" id="contact">
 							<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzd4bQYT8Z8yb4s0fOGLiBcwHgFQN__sd8HHma7FsILoONy9L8C/exec">
 								<input type="text" name="nom" placeholder="Votre Nom"><br>
 								<input type="email" name="email" placeholder="Votre adresse email"><br>
-								<textarea class="inputText" type="textarea" rows="10" cols="5" placeholder="Laissez nous un petit message"></textarea><br>
-								<input type="submit" name="Envoyer" value="ENVOYER">
+								<textarea class="inputText" rows="10" cols="5" placeholder="Laissez nous un petit message"></textarea><br>
+								<input type="submit" name="Envoyer" value="ENVOYER" id="sendButton">
 							</form>
 					</div>
 					<script>

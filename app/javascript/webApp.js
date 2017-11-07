@@ -1,5 +1,4 @@
 
-
 $(document).ready(function(){
   setTimeout(function(){
     $(".coverTitle").addClass("coverTitleFull")
@@ -33,19 +32,26 @@ $('#cross2').click(function(){
   window.location="index.html#services";
 });
 
-$(".picWebApp").one("click", function(){
-  $("#appText").html("");
-  var text = $(this).data('text');
-  typeWriter(text, 0);
+var clicked = false
+
+$(".picWebApp").on("click", function(){
+  console.log(clicked)
+  if (clicked == false){
+    var text = $(this).data('text');
+    clicked = true;
+    typeWriter(text, 0);
+  }
 })
 
 function typeWriter(text, n) {
-  queue: false;
   if (n < (text.length)) {
     $("#appText").html(text.substring(0, n+1));
     n++;
     setTimeout(function() {
       typeWriter(text, n);
     }, 100);
+  }
+  else{
+    clicked = false
   }
 }
