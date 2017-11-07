@@ -3,7 +3,7 @@ $(document).ready(function(){
     $(".coverTitle").addClass("coverTitleFull")
     setTimeout(function(){
       $(".coverTitle").removeClass("coverTitleFull")
-      $(".webDesignPage .title span").toggleClass("unfade");
+      $("#webDesignPage .title span").toggleClass("unfade");
     },600)
   },800)
 
@@ -13,7 +13,9 @@ $(document).ready(function(){
 
   setTimeout(function(){
     $(".container").toggleClass("unfade");
-    $("#cross").removeClass("fade")
+    $("#cross").removeClass("fade");
+    $(".inUnderContainer").addClass("unfade")
+    $("#webDesignPage").addClass("whiteBackground")
   }, 3500)
 
   setTimeout(function(){
@@ -21,7 +23,7 @@ $(document).ready(function(){
     $(".picWebSite img").removeClass("invisible");
   }, 3800)
 
-  $(".webDesignPage .title").toggleClass("widthAuto");
+  $("#webDesignPage .title").toggleClass("widthAuto");
 })
 
 $('#cross').click(function(){
@@ -41,7 +43,7 @@ $(".picWebSite").on("click", function(){
 
 function typeWriter(text, n) {
   if (n < (text.length)) {
-    $("#appText").html(text.substring(0, n+1));
+    $("#webText").html(text.substring(0, n+1));
     n++;
     setTimeout(function() {
       typeWriter(text, n);

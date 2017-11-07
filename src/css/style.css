@@ -78,7 +78,6 @@ h1 {
   padding: 0px 0px 20px 53px;
   line-height: 1.1;
   margin-bottom: 15px;
-  letter-spacing: 2px;
 }
 
 h2 {
@@ -657,10 +656,57 @@ div h3 {
   height: 311px;
 }
 
-/*.container{
+.underContainer{
   display: flex;
   flex-wrap: wrap;
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.inUnderContainer{
+  height: 300px;
+  width: 50%;
+  background: #fff;
+  opacity: 0;
+  z-index: 1;
+  transition: 700ms;
+  color: rgb(29, 32, 47);
+}
+
+.inUnderContainer p{
+  text-align: right;
+  font-weight: 300;
+  padding: 50px;
+}
+
+.inUnderContainer p.textleft{
+  text-align: left;
+}
+/*
+.inUnderContainer p:nth-child(n+4){
+  text-align: left;
 }*/
+
+div .inUnderContainer img{
+  height: 90%;
+  width: auto;
+  margin-top: 2%;
+  -webkit-filter: brightness(1);
+  filter: brightness(1);
+  transition: 500ms;
+}
+
+div .inUnderContainer:hover img{
+z-index: 5;
+transform: scale(1.5);
+
+}
+
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
 
 .container{
   height: 100vh;
@@ -669,22 +715,22 @@ div h3 {
   transition: 500ms;
 }
 
-.webAppPage .container{
-  background: url(../img/blackBackground3.png) center center;
-  background-size: cover;
-}
-
-.webDesignPage .container{
+#webAppPage .container{
   background-size: cover;
   background: #fff;
 }
 
-.webAppPage .container .centered{
+#webDesignPage .container{
+  background-size: cover;
+  background: #fff;
+}
+
+#webAppPage .container .centered{
   right: 30%;
   top: 42%;
 }
 
-.webDesignPage .container .windowUp{
+#webDesignPage .container .windowUp{
   top: -30%;
 }
 
@@ -719,27 +765,28 @@ div h3 {
 }
 
 .picWebApp:nth-child(1){
-  top: 46%;
-  right: 71%;
-  width: 304px;
+  bottom: -5%;
+  left: -8%;
+  width: 492px;
   transition: 1500ms;
+  transform: rotate(83deg);
 }
 
 .picWebApp:nth-child(2){
-  top: 30vh;
-  right: 25%;
-  width: 290px;
+  top: 1%;
+  left: -2%;
+  width: 438px;
   transition: 1800ms;
-  /*transition-delay: 1200ms;*/
-  transform: rotate(25deg);
+  /* transition-delay: 1200ms; */
+  transform: rotate(36deg);
 }
 
 .picWebApp:nth-child(3){
-  top: 75px;
-  right: 75%;
-  width: 349px;
+  bottom: -7%;
+  right: -2%;
+  width: 545px;
   transition: 1000ms;
-  /*transition-delay: 300ms;*/
+  /* transition-delay: 300ms; */
 }
 
 .picWebApp:nth-child(4){
@@ -757,19 +804,19 @@ div h3 {
   transform: rotate(93deg);
 }
 
-/*.picWebSite:nth-child(1){
-  top: 69%;
-  right: 39%;
-  width: 418px;
-  transition: 1500ms;
-}*/
-
+.picWebSite:nth-child(1){
+  top: -4%;
+  left: -1%;
+  width: 378px;
+  transition: 1000ms;
+}
+/*
 .picWebSite:nth-child(1) {
   top: 1%;
   right: 60%;
   width: 441px;
   transition: 1000ms;
-}
+}*/
 
 /*.picWebSite:nth-child(2){
   top: 48%;
@@ -818,7 +865,7 @@ div h3 {
   max-width: 70%;
 }
 
-.webDesignPage #appText{
+#webDesignPage #appText{
   position: absolute;
   top: 3%;
   left: 2%;
@@ -836,6 +883,34 @@ div h3 {
   color: orange;
 }
 
+#webText{
+  position: absolute;
+  top: 2%;
+  left: 20%;
+  height: 30px;
+  color: #fff;
+  max-width: 70%;
+}
+
+#webDesignPage #webText{
+  position: absolute;
+  top: 80%;
+  left: 70px;
+  height: 30px;
+  color: #fff;
+  width: 30px;
+  width: 70vw;
+}
+
+#webText:after{
+  height: 300px;
+  width: 500px;
+  position: relative;
+  right:0px
+  bottom: 0px;
+  color: orange;
+}
+
 .container div h3 {
   padding-top: 10px;
   font-family: monospace;
@@ -845,6 +920,14 @@ div h3 {
   line-height: 1.05;
   white-space: normal;
   border: none;
+}
+
+#webDesignPage.whiteBackground{
+  background: #fff;
+}
+
+#webAppPage.whiteBackground{
+  background: #fff;
 }
 
 .paragraphe{
@@ -903,7 +986,7 @@ article div img{
   transition: 500ms ease-in-out;
 }
 
-.webDesignPage , .webAppPage{
+#webDesignPage, #webAppPage{
   background-color: rgb(73,125, 55);
   color: #fff;
   margin: 0 auto;
@@ -928,7 +1011,7 @@ article div img{
   width: 0%;
 }
 
-.webDesignPage .title, .webAppPage .title{
+#webDesignPage .title, #webAppPage .title{
   font-size: 100px;
   /*background-color: rgb(73,125, 55);*/
   width: 0px;
@@ -939,12 +1022,12 @@ article div img{
   top: 42vh;
 }
 
-.webDesignPage .title{
+#webDesignPage .title{
   margin-left: calc(50% - 314px);
 }
 
 
-.webDesignPage .title span, .webAppPage .title span{
+#webDesignPage .title span, #webAppPage .title span{
   margin: 0 auto;
   top: 28px;
   position: relative;
@@ -956,7 +1039,7 @@ article div img{
   font-weight: 200;
 }
 
-.webDesignPage .title.widthAuto, .webAppPage .title.widthAuto{
+#webDesignPage .title.widthAuto, #webAppPage .title.widthAuto{
   width: auto;
   height: 100px;
   opacity: 1;
@@ -1317,7 +1400,7 @@ CROSS
       width: 50%;
   }
 
-  .webDesignPage .title {
+  #webDesignPage .title {
     margin-left: calc(50% - 234px);
     font-size: 80px;
 }
@@ -1329,7 +1412,7 @@ CROSS
     margin-top: 2em;
   }
 
-  .webDesignPage .title {
+  #webDesignPage .title {
       margin-left: calc(50% - 165px);
       font-size: 54px;
       top: 22vh;
@@ -1378,7 +1461,7 @@ CROSS
     font-size: 2.4em;
   }
 
-  .webDesignPage .title {
+  #webDesignPage .title {
     margin-left: calc(50% - 118px);
     font-size: 42px;
     top: 15vh;

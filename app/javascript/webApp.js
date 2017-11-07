@@ -1,16 +1,15 @@
-
 $(document).ready(function(){
   setTimeout(function(){
     $(".coverTitle").addClass("coverTitleFull")
     setTimeout(function(){
       $(".coverTitle").removeClass("coverTitleFull")
-      $(".webAppPage .title span").toggleClass("unfade");
+      $("#webAppPage .title span").toggleClass("unfade");
     },600)
   },800)
 
-  setTimeout(function(){
-    $(".webAppPage .title span").removeClass("unfade");
-  }, 3000)
+  // setTimeout(function(){
+  //   $(".webAppPage .title span").removeClass("unfade");
+  // }, 3000)
 
   // setTimeout(function(){
   //   $(".inContainer").toggleClass("unfade");
@@ -18,6 +17,9 @@ $(document).ready(function(){
 
   setTimeout(function(){
     $(".container").toggleClass("unfade");
+    $("#cross").removeClass("fade");
+    $(".inUnderContainer").addClass("unfade")
+    $("#webAppPage").addClass("whiteBackground")
   }, 3500)
 
   setTimeout(function(){
@@ -25,10 +27,10 @@ $(document).ready(function(){
     $(".picWebApp img").removeClass("invisible");
   }, 3800)
 
-  $(".webAppPage .title").toggleClass("widthAuto");
+  $("#webAppPage .title").toggleClass("widthAuto");
 })
 
-$('#cross2').click(function(){
+$('#cross').click(function(){
   window.location="index.html#services";
 });
 
