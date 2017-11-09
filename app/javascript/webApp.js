@@ -3,7 +3,7 @@ $(document).ready(function(){
     $(".coverTitle").addClass("coverTitleFull")
     setTimeout(function(){
       $(".coverTitle").removeClass("coverTitleFull")
-      $("#webAppPage .title span").toggleClass("unfade");
+      $("#webAppPage .title h1").toggleClass("unfade");
     },600)
   },800)
 
@@ -47,7 +47,7 @@ $(".picWebApp").on("click", function(){
 
 function typeWriter(text, n) {
   if (n < (text.length)) {
-    $("#appText").html(text.substring(0, n+1));
+    $("#webText").html(text.substring(0, n+1));
     n++;
     setTimeout(function() {
       typeWriter(text, n);
@@ -57,3 +57,22 @@ function typeWriter(text, n) {
     clicked = false
   }
 }
+
+$(window).on("scroll", function(){
+  var scrollTop = $(window).scrollTop();
+  console.log(scrollTop)
+  if($(window).width() < 450){
+    if(scrollTop > 600){
+      $("#cross span").css({background: "rgb(29, 32, 47)"})
+    }
+    else{
+      $("#cross span").css({background: "white"})
+    }
+  }
+
+})
+
+
+setTimeout(function(){
+  $(".introduction").addClass("unfade")
+}, 4200)

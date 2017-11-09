@@ -661,12 +661,12 @@ div h3 {
   flex-wrap: wrap;
   width: 1024px;
   margin: 0 auto;
+  margin-top: 40px;
 }
 
 .inUnderContainer{
   height: 300px;
   width: 50%;
-  background: #fff;
   opacity: 0;
   z-index: 1;
   transition: 700ms;
@@ -674,18 +674,17 @@ div h3 {
 }
 
 .inUnderContainer p{
-  text-align: right;
+  text-align: left;
   font-weight: 300;
-  padding: 50px;
+  padding: 25px;
 }
 
-.inUnderContainer p.textleft{
-  text-align: left;
+.inUnderContainer p a{
+  text-decoration: none;
+  font-weight: 400;
+  color: rgb(29, 32, 47);
 }
-/*
-.inUnderContainer p:nth-child(n+4){
-  text-align: left;
-}*/
+
 
 div .inUnderContainer img{
   height: 90%;
@@ -709,7 +708,7 @@ img.displayed {
   }
 
 .container{
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   opacity: 0;
   transition: 500ms;
@@ -717,12 +716,12 @@ img.displayed {
 
 #webAppPage .container{
   background-size: cover;
-  background: #fff;
+  background: rgba(224,224,224,0.2)	;
 }
 
 #webDesignPage .container{
   background-size: cover;
-  background: #fff;
+  background: rgba(224,224,224,0.2)	;
 }
 
 #webAppPage .container .centered{
@@ -732,6 +731,35 @@ img.displayed {
 
 #webDesignPage .container .windowUp{
   top: -30%;
+}
+
+.introduction{
+  opacity: 0;
+  background: rgba(224,224,224,0.5)	;
+  font-weight: 300;
+  transition: 500ms;
+}
+
+.introduction h2{
+  color: rgb(29, 32, 47);
+  text-align: center;
+  padding: 50px;
+}
+
+.introduction p{
+  width: 950px;
+  margin: 0 auto;
+  padding: 0px 30px 60px 30px;
+  column-count: 2;
+  column-gap: 20px;
+  column-width: 100px;
+  color: rgb(29, 32, 47);
+}
+
+.introduction p a{
+  text-decoration: none;
+  color: rgb(29, 32, 47);
+  font-weight: 400;
 }
 
 
@@ -756,7 +784,7 @@ img.displayed {
   width: 100%;
   transition: 1000ms;
   cursor: pointer;
-  filter: brightness(0.7);
+  filter: brightness(0.8);
 }
 
 .picWebApp:hover img, .picWebSite:hover img{
@@ -765,43 +793,20 @@ img.displayed {
 }
 
 .picWebApp:nth-child(1){
-  bottom: -5%;
-  left: -8%;
+  top: 5%;
+  left: -12%;
   width: 492px;
   transition: 1500ms;
-  transform: rotate(83deg);
+  transform: rotate(93deg);
 }
 
 .picWebApp:nth-child(2){
-  top: 1%;
-  left: -2%;
-  width: 438px;
-  transition: 1800ms;
-  /* transition-delay: 1200ms; */
-  transform: rotate(36deg);
-}
-
-.picWebApp:nth-child(3){
   bottom: -7%;
-  right: -2%;
+  right: -6%;
   width: 545px;
   transition: 1000ms;
-  /* transition-delay: 300ms; */
-}
-
-.picWebApp:nth-child(4){
-  top: 67%;
-  right: 5%;
-  width: 359px;
-  transition: 1200ms;
-}
-
-.picWebApp:nth-child(5){
-  top: 55%;
-  right: 48%;
-  width: 115px;
-  transition: 1200ms;
-  transform: rotate(93deg);
+  /* transition-delay: 1200ms; */
+  transform: rotate(-21deg);
 }
 
 .picWebSite:nth-child(1){
@@ -810,20 +815,6 @@ img.displayed {
   width: 378px;
   transition: 1000ms;
 }
-/*
-.picWebSite:nth-child(1) {
-  top: 1%;
-  right: 60%;
-  width: 441px;
-  transition: 1000ms;
-}*/
-
-/*.picWebSite:nth-child(2){
-  top: 48%;
-  right: 8%;
-  width: 290px;
-  transition: 1800ms;
-}*/
 
 .picWebSite:nth-child(2) {
     top: 27vh;
@@ -847,14 +838,6 @@ img.displayed {
   width: 359px;
   transition: 1200ms;
 }
-
-/*.picWebSite:nth-child(5){
-  top: 55%;
-  right: 48%;
-  width: 115px;
-  transition: 1200ms;
-  transform: rotate(93deg);
-}*/
 
 #appText{
   position: absolute;
@@ -886,10 +869,12 @@ img.displayed {
 #webText{
   position: absolute;
   top: 2%;
-  left: 20%;
+  left: 35%;
   height: 30px;
   color: #fff;
   max-width: 70%;
+  width: 50px;
+  width: 50vw;
 }
 
 #webDesignPage #webText{
@@ -923,11 +908,11 @@ img.displayed {
 }
 
 #webDesignPage.whiteBackground{
-  background: #fff;
+background: rgba(224,224,224,0.2);
 }
 
 #webAppPage.whiteBackground{
-  background: #fff;
+background: rgba(224,224,224,0.2);
 }
 
 .paragraphe{
@@ -1027,7 +1012,7 @@ article div img{
 }
 
 
-#webDesignPage .title span, #webAppPage .title span{
+#webDesignPage .title h1, #webAppPage .title h1{
   margin: 0 auto;
   top: 28px;
   position: relative;
@@ -1037,12 +1022,19 @@ article div img{
   -o-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
   font-weight: 200;
+  font-size: 100px;
+  line-height: 0.2;
+  padding-left: 0px;
 }
 
 #webDesignPage .title.widthAuto, #webAppPage .title.widthAuto{
   width: auto;
   height: 100px;
   opacity: 1;
+}
+
+#cross span.blackCross{
+  background: rgb(29, 32, 47);
 }
 
 .coverTitle{
@@ -1330,6 +1322,12 @@ CROSS
   text-align: left;
 }
 
+@media screen and (max-width: 1024px){
+  .underContainer {
+      width: 800px;
+    }
+  }
+
 @media screen and (max-width: 950px){
   .divUnderAbout{
     flex-direction: column;
@@ -1339,9 +1337,26 @@ CROSS
     padding: 120px 10px 10px 0px;
   }
 
+  p{
+    line-height: 1.3em;
+    font-size: 1.1em;
+  }
+
+  .introduction p{
+    width: 620px;
+  }
+
+  .picWebApp:nth-child(3) {
+    display: none;
+  }
+
+  .picWebApp:nth-child(1) {
+    left: -17%;
+  }
+
   .comment p {
     font-size: 0.7em;
-}
+  }
 
   .underAbout figure {
     top: -301px;
@@ -1400,22 +1415,73 @@ CROSS
       width: 50%;
   }
 
-  #webDesignPage .title {
+  #webDesignPage .title{
     margin-left: calc(50% - 234px);
-    font-size: 80px;
 }
 
+#webDesignPage .title h1, #webAppPage .title h1 {
+    font-size: 80px;
+  }
+
 }
+
+@media screen and (max-width: 800px){
+  .underContainer {
+      width: 650px;
+    }
+
+    .inUnderContainer {
+      height: 285px;
+    }
+  }
 
 @media screen and (max-width: 650px){
+  .underContainer {
+      width: 100%;
+    }
+
+    .introduction p {
+    width: 420px;
+    }
+
   .leftAbout {
     margin-top: 2em;
   }
 
+  .picWebApp:nth-child(1) {
+    left: -76%;
+    bottom: -37%;
+  }
+
+  .picWebApp:nth-child(2) {
+    display: none;
+  }
+
+  #webAppPage .title{
+    margin-left: calc(50% - 120px);
+    top: 18vh;
+  }
+
+  #webAppPage .title h1{
+    font-size: 63px;
+  }
+
+  .inUnderContainer p {
+    text-align: center;
+  }
+
+  .inUnderContainer {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   #webDesignPage .title {
       margin-left: calc(50% - 165px);
-      font-size: 54px;
       top: 22vh;
+  }
+
+  #webDesignPage .title h1 {
+      font-size: 54px;
   }
 
   .picWebSite:nth-child(1) {
@@ -1438,15 +1504,68 @@ CROSS
 }
 
 @media screen and (max-width: 450px){
-  #webApp {
-    right: -27px;
-    top: -205px;
+
+  p {
+    font-size: 0.99em;
+  }
+
+  .introduction p {
+  width: 80vw;
+  column-count: 1;
+  }
+
+  .container {
+    height: 70vh;
+}
+
+  .rectangleRuttar {
+    width: 303px;
+    right: 2%;
+    height: 111px;
+    top: 144px;
+  }
+
+  .rectangleWD {
+    width: 225px;
+    right: 2%;
+    height: 35px;
+    top: 105px;
+  }
+
+  #home .zeropx{
+    width: 0px;
+  }
+
+  .inUnderContainer {
+      width: 90%;
+      height: 240px;
+  }
+
+  .picWebSite:nth-child(2) {
+    top: 17vh;
+    width: 277px;
+  }
+
+  .picWebApp:nth-child(1) {
+    left: -130%;
+}
+
+.coverTitle {
+    height: 55px;
+}
+
+    #webApp{
+      right: -2px;
+    }
+
+  #webAppPage .title {
+    top: 8vh;
   }
 
   .inContainer {
-    width: calc(100vw - 30px);
-    margin: 15px;
-    height: 621px;
+      width: 100vw;
+      margin: 0px;
+      height: 621px;
   }
 
   .empty2 {
@@ -1463,13 +1582,26 @@ CROSS
 
   #webDesignPage .title {
     margin-left: calc(50% - 118px);
-    font-size: 42px;
     top: 15vh;
   }
 
+
+  #webAppPage .title {
+    margin-left: calc(50% - 85px);
+    top: 15vh;
+  }
+
+  #webDesignPage .title h1{
+    font-size: 42px;
+  }
+
+  #webAppPage .title h1{
+    font-size: 42px;
+  }
+
   #cross, #cross2 {
-    top: 18px;
-    right: 16px;
+    top: 26px;
+    right: 13px;
   }
 
   #cross span{
@@ -1498,10 +1630,6 @@ CROSS
     padding-top: 42px;
     font-size: 17px;
     right: 0px;
-  }
-
-  #webApp{
-    right: -2px;
   }
 
   .rightAbout p {

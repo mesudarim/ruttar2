@@ -150,22 +150,13 @@ $( ".underAbout" ).on("click", function() {
 document.addEventListener('mousemove', evenement => {
     var scrollTop = $(window).scrollTop();
     var halfWindow = $(window).width()/2;
-    if(halfWindow > 475){
-      var diff = $(window).width() - 1024;
+    // if(halfWindow > 475){
+    //   var diff = $(window).width() - 1024;
       x = evenement.clientX;
       y = evenement.clientY + scrollTop;
       if( y > 3120 && y < 3800){
-        if($(window).width() < 1024){
-          if(x < halfWindow){
-            $("#webDesign").css("left", x - 200);
-            $("#webDesign").css("top", y - 3800);
-          }
-          else{
-            $("#webApp").css("right", $(window).width() - x - 200);
-            $("#webApp").css("top", y - 3800);
-          }
-        }
-        else{
+        if($(window).width() >= 950){
+          var diff = $(window).width() - 1024;
           if(x < halfWindow){
             $("#webDesign").css("left", x - 100 - diff/2 );
             $("#webDesign").css("top", y - 3800);
@@ -176,11 +167,23 @@ document.addEventListener('mousemove', evenement => {
           }
         }
       }
+      if( y > 3300 && y < 4000){
+        if($(window).width() < 950 && $(window).width() > 500){
+          if(x < halfWindow){
+            $("#webDesign").css("left", x - 300);
+            $("#webDesign").css("top", y - 3700);
+          }
+          else{
+            $("#webApp").css("right", $(window).width() - x - 300);
+            $("#webApp").css("top", y - 3700);
+          }
+        }
+      }
 
-    }
-    else{
-      console.log("halfWindow > 475")
-    }
+    // }
+    // else if{
+    //   console.log("halfWindow > 475")
+    // }
 
 })
 
@@ -201,7 +204,9 @@ var showingSeed = false
 var showingTeam = false
 ////selection du menu pendant le scroll
 $(window).on("scroll", function(){
+
     var scrollTop = $(window).scrollTop();
+    console.log(scrollTop)
     var limit = scrollTop + $(window).height();
 
     if(scrollTop > 1640 && $(window).scrollTop() < 1660){
